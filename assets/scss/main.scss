@@ -344,3 +344,19 @@ body {
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        section#hero {
+            .container {
+                .row {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    img:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
