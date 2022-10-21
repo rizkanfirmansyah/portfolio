@@ -1,0 +1,91 @@
+@font-face {
+    font-family: rubik;
+    src: url('../fonts/Rubik/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: inter;
+    src: url('../fonts/Inter/Inter-Regular.ttf');
+}
+
+$color: ("primary": #375AA1,
+"dark": #231F20,
+"alternatif": #D65348,
+"light": #ffffff,
+"disabled": #f9f9f9,
+"secondary": rgba(35,
+31,
+32,
+0.5),
+"semidark": rgba(35,
+31,
+32,
+0.75),
+"semiprimary": rgba(55,
+90,
+161,
+0.15));
+$weight: ("light": 300,
+"regular": 400,
+"medium": 500,
+"semibold": 600,
+"bold": 700,
+);
+@mixin title {
+    font-family: 'InterSemiBold';
+    font-size: 32px;
+    line-height: 45px;
+}
+
+@mixin paragraph {
+    font-family: 'Inter';
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+@mixin primaryBadge {
+    padding: 10px 20px 10px 20px;
+    background-color: map-get($color, 'info') !important;
+    color: map-get($color, 'primary') !important;
+    font-size: 13px;
+    font-family: 'Inter';
+    border-radius: 15px;
+}
+
+@mixin accordionItem {
+    border: map-get($color, 'lightdark') 1px solid;
+    border-radius: 0%;
+    background-color: map-get($color, 'secondary');
+}
+
+@mixin accordionButtonCollapsed {
+    background: transparent;
+    font-family: 'Inter';
+    color: rgba(35, 31, 32, 0.75);
+    font-size: 18px;
+}
+
+@mixin accordionButtonCollapsedAfter {
+    background-image: url("/assets/icons/plus.png");
+    margin-bottom: 0px;
+}
+
+@mixin accordionButton {
+    background: transparent;
+    font-family: 'InterMedium';
+    color: map-get($color, 'primary');
+    font-size: 18px;
+    border-bottom: map-get($color, 'lightdark') 0.5px solid;
+    box-shadow: none;
+}
+
+@mixin accordionButtonAfter {
+    margin-bottom: 12px;
+    background-image: url("/assets/icons/minus.png");
+}
+
+@mixin accordionBody {
+    color: map-get($color, 'semidark');
+    font-size: 16px;
+    font-family: 'Inter';
+}
